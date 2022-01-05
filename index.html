@@ -41,7 +41,8 @@
 
     <main class="container">
 
-        <section class="entrada">
+        <form class="entrada">
+
 
             <div class="entrada-item entrada-item-01">
                 <label for="transacao">Tipo de Transação</label><br>
@@ -53,19 +54,19 @@
 
             <div class="entrada-item entrada-item-02">
                 <label for="mercadoria">Nome da Mercadoria</label><br>
-                <input type="text" name="mercadoria" id="mercadoria" placeholder="Input">
+                <input type="text" name="mercadoria" id="mercadoria" placeholder="Input" required>
             </div>
 
             <div class="entrada-item entrada-item-03">
                 <label for="valor">Valor</label><br>
-                <input type="number" name="valor" id="valor" placeholder="R$ 0,00">
+                <input type="number" name="valor" id="valor" placeholder="R$ 0,00" required>
             </div>
 
             <div class="entrada-item entrada-item-04">
-                <input type="button" value="Adicionar Transação">
+                <input type="submit" value="Adicionar Transação">
             </div>
+        </form>
 
-        </section>
 
         <section class="saidas">
 
