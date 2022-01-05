@@ -1,0 +1,63 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+}
+
+
+body {
+    font-family: 'Lato', sans-serif;
+
+}
+
+.cabecalho {
+    background-color: #E0E0E0;
+    width: 411px;
+    height: 60px;
+    text-align-last: justify;  
+    align-items: center;
+    text-align: center;
+     
+
+}
+
+.cab-01 {
+    width: 30px;
+    height: 27,63px;
+    margin: 15px 0 0 22px;
+}
+
+.cab-02 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    vertical-align: super;
+    
+}
+
+.cab-03 {
+        width: 18px;
+        height: 2px;
+        background-color: black;
+        margin: 0 25px 4px 0;
+        
+      
+}
+
+.cab-item {
+    display: inline-block;
+   
+}
+
+
+  
+
+.btn-menu {
+    background-color: transparent;
+    border: none;
+}
+  
+   
+
+
