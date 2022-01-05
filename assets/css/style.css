@@ -11,7 +11,6 @@
 body {
 font-family: 'Lato', sans-serif;
 width: 411px;
-
 }
 
 
@@ -24,9 +23,7 @@ width: 411px;
     height: 60px;
     text-align-last: justify;  
     align-items: center;
-    text-align: center;
-     
-
+    text-align: center;   
 }
 
 .cab-01 {
@@ -39,8 +36,7 @@ width: 411px;
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
-    vertical-align: super;
-    
+    vertical-align: super;    
 }
 
 .cab-03 {
@@ -48,21 +44,19 @@ width: 411px;
         height: 2px;
         background-color: black;
         margin: 0 25px 4px 0;
-        
-      
 }
 
 .cab-item {
     display: inline-block;
-   
 }
  
-
 .btn-menu {
     background-color: transparent;
     border: none;
 }
   
+
+
 /* ENTRADAS -----------------------------------*/
 
 .container {
@@ -103,6 +97,89 @@ input, select{
     height: 40px;
     color: #ffffff;
 }
+
+
+
 /*  SÁIDAS-----------------------------------*/
 
+.tiitle {
+    height: 20px;
+    text-align: center;
+    margin-top: 32px;
+    padding: 40px;
+    /* texto */
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 22px;
+    border-top: solid #979797 1px;
+} 
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+tr {
+    border-bottom: 1px solid #000
+}
+
+.tabela-linha01 {
+    text-align: left;
+    line-height: 22px;
+    color: #000;
+    /* texto */
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+}
+
+.tabela-linha01 th:nth-child(3) {
+    text-align: center;
+}
+
+.extrato-btn {
+    width: 25px;
+    text-align: center;
+    height: 41.83px;
+}
+
+.extrato-mercadoria{
+    height: 41.83px;
+}
+
+.extrato-valor {
+    width: 120px;
+    height: 50.83px;
+    text-align: right;
+}
+
+.tabela-linha05 {
+    border-bottom:none;
+    /* texto */
+    font-weight: 700;
+}
+
+ .status {
+     text-align: right;
+     margin-top: -1rem;
+     /* texto */
+     font-size: 14px;
+     line-height: 22px;
+ }
+
+ .duas-linhas{
+     padding: 1.5px;
+
+ }
+
+
+
+ /*  Footer-----------------------------------*/
+
+ .rodape {
+     height: 8px;
+     background: black;
+ }
