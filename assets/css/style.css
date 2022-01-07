@@ -47,7 +47,9 @@ body {
 }
 
 .cabecalho-item-03 { 
-    margin-right: 10px; 
+    margin-right: 62px;
+    margin-bottom: 30px;
+    
 }
 
 .last-line {
@@ -176,7 +178,69 @@ tr {
  }
 
 
- 
+
+/* menu -----------------------------------*/
+
+ .cabecalho-item input[type="checkbox"] {
+    display: none;
+    
+}
+
+.cabecalho-item label {
+    padding: 15px; 
+    position: absolute;
+    z-index: 999;
+}
+
+nav{
+    background: #333333;
+    width: 350px;
+    height: 711px;
+    left: 61px;
+    position: absolute;
+    transition: all .5s;
+    
+    
+}
+
+.cabecalho-item input[type="checkbox"]:checked ~ nav {
+    transform: translateX(350px);
+}
+
+
+nav ul{
+    list-style: none;
+    margin-top: 50px;
+    position: absolute;
+    width: 100%;
+    
+}
+
+nav ul li{
+    
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 20px 5px;
+    /* texto */
+    color: #ffffff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    
+}
+
+nav ul li a:hover {
+background-color: #c4c4c4;
+color: #333333;
+font-size: 16px;
+line-height: 20px;
+font-weight: 600;
+
+}
 
  /* Footer-----------------------------------*/
 
