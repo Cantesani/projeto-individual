@@ -21,7 +21,6 @@ body {
 
 .cabecalho {
     position: absolute;
-    text-align-last: justify;
     background: #E0E0E0;
     width: 411px;
     height: 60px;    
@@ -42,20 +41,22 @@ body {
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
-    align-items: center;
-    text-align: center;
+    margin-left: 70px;
+
 }
 
 .cabecalho-item-03 { 
-    margin-right: 62px;
+    margin-right: -920px;
     margin-bottom: 30px;
+    margin-left: 50px;
+
     
 }
 
-.last-line {
-    display: inline-block;
-    width: 100%;
+.cabecalho-item img{
+    cursor: pointer;
 }
+
 
 /* ENTRADAS -----------------------------------*/
 
@@ -66,6 +67,7 @@ body {
 .entrada {
     margin-top: 70px;
 }
+
 .entrada-item {
     margin-bottom: 20px;
 }
@@ -99,6 +101,7 @@ input, select{
     height: 40px;
     color: #ffffff;
 }
+
 
 
 
@@ -189,7 +192,6 @@ tr {
 .cabecalho-item label {
     padding: 15px; 
     position: absolute;
-    z-index: 999;
 }
 
 nav{
@@ -199,6 +201,7 @@ nav{
     left: 61px;
     position: absolute;
     transition: all .5s;
+    text-align:right ;
     
     
 }
@@ -206,7 +209,6 @@ nav{
 .cabecalho-item input[type="checkbox"]:checked ~ nav {
     transform: translateX(350px);
 }
-
 
 nav ul{
     list-style: none;
@@ -216,8 +218,10 @@ nav ul{
     
 }
 
-nav ul li{
-    
+nav ul label {
+  display: block;
+  margin-left: 10px;
+  margin-top: -40px;
 }
 
 nav ul li a {
