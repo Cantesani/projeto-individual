@@ -195,19 +195,20 @@ tr {
 }
 
 nav{
+    display: none;
     background: #333333;
     width: 350px;
     height: 711px;
-    left: 61px;
     position: absolute;
     transition: all .5s;
-    text-align:right ;
-    
-    
+    text-align:right;
+    right: 350px;
+
 }
 
 .cabecalho-item input[type="checkbox"]:checked ~ nav {
     transform: translateX(350px);
+    display: inline-block;
 }
 
 nav ul{
@@ -215,15 +216,17 @@ nav ul{
     margin-top: 50px;
     padding: 15px;
     position: absolute;
-    width: 100%;
+    width: 100%;    
+}
 
-    
+nav ul li{
 }
 
 nav ul label {
   display: block;
   margin-left: 10px;
   margin-top: -45px;
+  
 }
 
 nav ul li a {
