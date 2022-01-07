@@ -6,64 +6,64 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 0;
 }
 
-body {
-font-family: 'Lato', sans-serif;
-width: 411px;
+body {  
+    font-family: 'Lato', sans-serif;
+    width: 411px;
+    height: 711px;
 }
-
 
 
 /* HEADER -----------------------------------*/
 
+
 .cabecalho {
-    background-color: #E0E0E0;
+    position: absolute;
+    text-align-last: justify;
+    background: #E0E0E0;
     width: 411px;
-    height: 60px;
-    text-align-last: justify;  
-    align-items: center;
-    text-align: center;   
+    height: 60px;    
+    
 }
 
-.cab-01 {
-    width: 30px;
-    height: 27,63px;
-    margin: 15px 0 0 22px;
+.cabecalho-item {
+    display: inline-block;
 }
 
-.cab-02 {
+.cabecalho-item-01 {
+    margin: 10px 0 0 10px;
+}
+
+.cabecalho-item-02 {  
+    /* texto */
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
-    vertical-align: super;    
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
 }
 
-.cab-03 {
-        width: 18px;
-        height: 2px;
-        background-color: black;
-        margin: 0 25px 4px 0;
+.cabecalho-item-03 { 
+    margin-right: 10px; 
 }
 
-.cab-item {
+.last-line {
     display: inline-block;
+    width: 100%;
 }
- 
-.btn-menu {
-    background-color: transparent;
-    border: none;
-}
-  
-
 
 /* ENTRADAS -----------------------------------*/
 
 .container {
-    padding: 20px;
-    width: 100%;
+    padding: 15px;
 }
 
+.entrada {
+    margin-top: 70px;
+}
 .entrada-item {
     margin-bottom: 20px;
 }
@@ -176,8 +176,9 @@ tr {
  }
 
 
+ 
 
- /*  Footer-----------------------------------*/
+ /* Footer-----------------------------------*/
 
  .rodape {
      height: 8px;
