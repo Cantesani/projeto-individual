@@ -12,7 +12,7 @@
 body {  
     font-family: 'Lato', sans-serif;
     width: 411px;
-    height: 711px;
+    height: 731px;
 }
 
 
@@ -102,7 +102,9 @@ input, select{
     color: #ffffff;
 }
 
-
+.container .nova-transacao {
+    display: none;
+}
 
 
 /*  SÁIDAS-----------------------------------*/
@@ -219,8 +221,6 @@ nav ul{
     width: 100%;    
 }
 
-nav ul li{
-}
 
 nav ul label {
   display: block;
@@ -251,9 +251,140 @@ font-weight: 600;
 
 }
 
- /* Footer-----------------------------------*/
 
- .rodape {
-     height: 8px;
-     background: black;
- }
+/* MEDIA QUERY -----------------------------------*/
+
+
+/* ---------------------------------------------- */
+ /* SMARTPHONE    - 411 x 731 */
+ /* TABLETS       - 768 x 1024*/
+ /* TABLETS LAND  - 1112 x 834*/
+ /* DESKTOP       - 1500 x 1000*/
+/* ---------------------------------------------- */
+
+
+ /* MEDIA QUERY - SMART (411 x 731) */  
+
+ @media screen and (min-width: 411px) {
+          
+    }
+
+    
+ /* MEDIA QUERY - TABLETS (768 x 1024)*/
+ 
+ @media screen and (min-width: 768px) {
+
+    body {
+        width: 768px;
+        height: 1025px;
+    }
+
+
+/* HEADER -----------------------------------*/
+
+    .cabecalho {
+        width: 768px;
+    }
+
+    .cabecalho .cabecalho-item-02 {
+    margin-left: 250px;
+    }
+
+    .cabecalho .cabecalho-item-03 img{
+    margin-left: 170px;   
+    }
+
+ 
+
+/* ENTRADAS -----------------------------------*/
+
+.container .entrada {
+    width: 728px;
+    height: 189px;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 20px;
+    color: #979797;
+}
+
+.container .nova-transacao {
+    display: block;
+    text-align: center;
+    color: #000000;
+    /* texto */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px; 
+}
+ 
+.entrada .entrada-item {
+    box-sizing: border-box;
+    padding-top: 20px;
+    text-align: justify;
+}
+
+.entrada-item-01 {
+    display: inline-block;
+    width: 170px;
+    height: 32px;
+    border-radius: 4px;
+    padding-right: 20px;
+}
+
+.entrada-item-02 {
+    display: inline-block;
+    width: 336px;
+
+    height: 32px;
+    border-radius: 4px;
+    padding-right: 20px;
+}
+
+.entrada-item-03 {
+    display: inline-block;
+    width: 170px;
+    height: 32px;
+    border-radius: 4px;
+}
+
+.entrada-item-04 {
+    display: flex;
+    width: 230px;
+    height: 32px;
+    border-radius: 4px;
+    margin-left: auto;
+}
+
+.tiitle {
+    border: none;
+}
+
+.container {
+    padding-right: 10px;
+}
+
+
+
+/* SAIDAS -----------------------------------*/
+
+.saidas {
+    margin-top: -30px;
+}
+
+
+
+/* MENU -----------------------------------*/
+
+nav {
+    width: 252px;
+    height: 1000px;
+}
+
+nav ul label {
+    display: block;
+    margin-left: -170px;
+    margin-top: -50px;
+
+}
+}
