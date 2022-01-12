@@ -252,6 +252,8 @@ font-weight: 600;
 }
 
 
+
+
 /* MEDIA QUERY -----------------------------------*/
 
 
@@ -321,7 +323,6 @@ font-weight: 600;
 .entrada .entrada-item {
     box-sizing: border-box;
     padding-top: 20px;
-    text-align: justify;
 }
 
 .entrada-item-01 {
@@ -386,5 +387,46 @@ nav ul label {
     margin-left: -170px;
     margin-top: -50px;
 
+}
+}
+
+/* MEDIA QUERY - TABLETS LANDSCAPE ( 1112 x 834 )*/
+
+@media screen and (min-width: 768px) and (orientation: landscape) {
+
+
+.cabecalho {
+    
+    width: 1112px;
+    height: 80px;
+}
+
+.cabecalho-item-03 img  {
+    display: none;
+}
+
+.cabecalho-item .teste {
+    width: 350px;
+    height: 40px;
+    background: white;
+    display: flex;
+    
+}
+
+.cabecalho-item nav ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho-item .teste li a {
+    color: black;
+    padding: 0;
+
+
+}
+
+nav ul label {
+display: none;
 }
 }
