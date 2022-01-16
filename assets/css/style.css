@@ -268,7 +268,6 @@ font-weight: 600;
  /* MEDIA QUERY - SMART (411 x 731) */  
 
  @media screen and (min-width: 411px) {
-          
     }
 
     
@@ -280,7 +279,6 @@ font-weight: 600;
         width: 768px;
         height: 1025px;
     }
-
 
 /* HEADER -----------------------------------*/
 
@@ -295,8 +293,6 @@ font-weight: 600;
     .cabecalho .cabecalho-item-03 img{
     margin-left: 170px;   
     }
-
- 
 
 /* ENTRADAS -----------------------------------*/
 
@@ -365,15 +361,11 @@ font-weight: 600;
     padding-right: 10px;
 }
 
-
-
 /* SAIDAS -----------------------------------*/
 
 .saidas {
     margin-top: -30px;
 }
-
-
 
 /* MENU -----------------------------------*/
 
@@ -392,11 +384,11 @@ nav ul label {
 
 /* MEDIA QUERY - TABLETS LANDSCAPE ( 1112 x 834 )*/
 
-@media screen and (min-width: 768px) and (orientation: landscape) {
+@media screen and (min-width: 1112px) and (orientation: landscape) {
 
+/* HEADER -----------------------------------*/
 
 .cabecalho {
-    
     width: 1112px;
     height: 80px;
 }
@@ -405,28 +397,88 @@ nav ul label {
     display: none;
 }
 
-.cabecalho-item .teste {
-    width: 350px;
+.cabecalho .menu-hamburguer {
+    width: 300px;
     height: 40px;
-    background: white;
     display: flex;
-    
+    margin-left: 500px;
+    background: #FFF;
+    position: unset;
+    align-items: center;
 }
 
-.cabecalho-item nav ul {
+.menu-hamburguer ul {
+    display: flex;
+    position: unset;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu-hamburguer a {
+    color: #333333;
+}
+
+.menu-hamburguer a:hover {
+    cursor: pointer;
+    background: none;
+}
+
+.menu_cadastro {
+    margin-left: 22px;
+    padding: 0px;
+}
+
+  .menu_limpar {
+      margin: 0px;
+      padding: 0px;
+  }
+
+  .menu_cadastro::after {
+    content: "|";
+    margin: 0px 19px;
+  }
+
+.cabecalho .cabecalho-item-02 {
+margin-left: 20px;
+}
+
+.container .entrada {
+width: 400px;
+height: 344px;
+}
+
+.entrada-item {
+    margin: 0px;
+    padding: 0px;
     display: inline-block;
+    flex-direction: row; 
+}
+
+.entrada-item-01 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.entrada-item-02 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.entrada-item-03 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.container .entrada select, input {
     margin: 0;
     padding: 0;
+    width: 100px;
+} 
+
+.container {
+    display: inline-flex;
+}
+/* _______________________________________ */
 }
 
-.cabecalho-item .teste li a {
-    color: black;
-    padding: 0;
 
-
-}
-
-nav ul label {
-display: none;
-}
-}

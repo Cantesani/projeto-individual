@@ -36,7 +36,7 @@
 
 
 
-                <nav class="teste">
+                <nav class="menu-hamburguer">
                     <ul>
 
                         <input class="check" type="checkbox" name="check" id="check">
@@ -44,9 +44,8 @@
                             <img class="cabecalho-item" src="./assets/img/menu-fechar.svg" alt="Imagem fechar menu">
                         </label>
 
-                        <li><a href="">Cadastro de Transações</a></li>
-                        <li><a href="">Limpar</a></li>
-
+                        <li><a class="menu_cadastro" href="">Cadastro de Transações</a></li>
+                        <li><a class="menu_limpar" href="">Limpar</a></li>
                     </ul>
                 </nav>
 
@@ -67,7 +66,7 @@
 
             <div class="entrada-item entrada-item-01">
                 <label for="transacao">Tipo de Transação</label>
-                <select name="transacao" id="transacao">
+                <select class="inp-entrada" name="transacao" id="transacao">
                     <option> Compra </option>
                     <option> Venda </option>
                 </select>
@@ -75,12 +74,12 @@
 
             <div class="entrada-item entrada-item-02">
                 <label for="mercadoria">Nome da Mercadoria</label>
-                <input type="text" name="mercadoria" id="mercadoria" placeholder="Input" required>
+                <input class="inp-entrada" type="text" name="mercadoria" id="mercadoria" placeholder="Input" required>
             </div>
 
             <div class="entrada-item entrada-item-03">
                 <label for="valor">Valor</label>
-                <input type="number" name="valor" id="valor" placeholder="R$ 0,00" required>
+                <input class="inp-entrada" type="number" name="valor" id="valor" placeholder="R$ 0,00" required>
             </div>
 
             <div class="entrada-item entrada-item-04">
