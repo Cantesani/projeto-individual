@@ -1,240 +1,88 @@
 /*  GERAL  -----------------------------------*/
-
 * {
+    font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    border: 0;
 }
 
 body {  
-    font-family: 'Lato', sans-serif;
-    width: 411px;
-    height: 731px;
+    border: 0;
+    box-sizing: border-box;
 }
 
 
 /* HEADER -----------------------------------*/
+ .cabecalho {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #c4c4c4;
+    }
 
-.cabecalho {
-    position: absolute;
-    background: #E0E0E0;
-    width: 411px;
-    height: 60px;      
+ .wrapper-entrada {
+    width: 100%;
+    display: flex;
+    text-align: center;
+ }
+
+ .texto-logo {
+    width: 100%;
 }
 
 .cabecalho-item {
-    display: inline-block;
+    padding: 15px;
 }
 
-.cabecalho-item-01 {
-    margin: 10px 0 0 10px;
+
+/* MENU -------------------------------------*/
+
+.box-menu .menu {
+    position: fixed;
+    width: 85%;
+    height: 100%;
+    color: white;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    background: #333333;
+    display: none;
 }
 
-.cabecalho-item-02 {  
-    /* texto */
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-    margin-left: 70px;
+.box-menu .menu .lista-menu{
+    padding: 25px;
+    text-align: right;
 }
 
-.cabecalho-item-03 { 
-    margin-right: -920px;
-    margin-bottom: 30px;
-    margin-left: 50px;
+.menu .menu-separador {
+    display: none;
 }
 
-.cabecalho-item img{
-    cursor: pointer;
+.menu .menu-fechar {
+    display: flex;
 }
+
+.box-menu .menu .lista-menu:hover{
+    background: white;
+    color: black;
+}
+.box-menu .menu .menu-fechar:hover {
+background: #333333;
+}
+
+.box-menu:hover .menu {
+    display: flex;
+}
+
+
+
 
 
 /* ENTRADAS -----------------------------------*/
 
-.container {
-    padding: 15px;
-}
-
-.entrada {
-    margin-top: 70px;
-}
-
-.entrada-item {
-    margin-bottom: 20px;
-}
-
-label {
-    font-style: normal;
-    font-size: 14px;
-    font-weight: 400;
-    color: #333333;
-    line-height: 22px;
-}
-
-input, select{
-    width: 100%;
-    height: 32px;
-    padding: 6px;
-    margin-top: 3px;
-    border: solid 1px #979797;
-    border-radius: 4px;
-    /* texto */
-    color: #888888;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 14px;
-    line-height: 22px;
-}
-
-.entrada-item-04 input {
-    background: #333333;
-    text-align: center;
-    height: 40px;
-    color: #ffffff;
-}
-
-.container .nova-transacao {
-    display: none;
-}
-
-
 /*  SÁIDAS-----------------------------------*/
 
-.tiitle {
-    height: 20px;
-    text-align: center;
-    margin-top: 32px;
-    padding: 40px;
-    /* texto */
-    font-weight: 700;
-    font-style: normal;
-    font-size: 18px;
-    line-height: 22px;
-    border-top: solid #979797 1px;
-} 
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 14px;
-    line-height: 16px;
-}
-
-tr {
-    border-bottom: 1px solid #000
-}
-
-.tabela-linha01 {
-    text-align: left;
-    line-height: 22px;
-    color: #000;
-    /* texto */
-    font-weight: 700;
-    font-style: normal;
-    font-size: 14px;
-}
-
-.tabela-linha01 th:nth-child(3) {
-    text-align: center;
-}
-
-.extrato-btn {
-    width: 25px;
-    text-align: center;
-    height: 41.83px;
-}
-
-.extrato-mercadoria{
-    height: 41.83px;
-}
-
-.extrato-valor {
-    width: 120px;
-    height: 50.83px;
-    text-align: right;
-}
-
-.tabela-linha05 {
-    border-bottom:none;
-    /* texto */
-    font-weight: 700;
-}
-
- .status {
-     text-align: right;
-     margin-top: -1rem;
-     /* texto */
-     font-size: 14px;
-     line-height: 22px;
- }
-
- .duas-linhas{
-     padding: 1.5px;
- }
 
 
-/* menu -----------------------------------*/
-
- .cabecalho-item input[type="checkbox"] {
-    display: none; 
-}
-
-.cabecalho-item label {
-    padding: 15px; 
-    position: absolute;
-}
-
-nav{
-    display: none;
-    background: #333333;
-    width: 350px;
-    height: 711px;
-    position: absolute;
-    transition: all .5s;
-    text-align:right;
-    right: 350px;
-}
-
-.cabecalho-item input[type="checkbox"]:checked ~ nav {
-    transform: translateX(350px);
-    display: inline-block;
-}
-
-nav ul{
-    list-style: none;
-    margin-top: 50px;
-    padding: 15px;
-    position: absolute;
-    width: 100%;    
-}
-
-nav ul label {
-  display: block;
-  margin-left: 10px;
-  margin-top: -45px;
-}
-
-nav ul li a {
-    display: block;
-    text-decoration: none;
-    color: black;
-    padding: 20px 5px;
-    /* texto */
-    color: #ffffff;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;  
-}
-
-nav ul li a:hover {
-    background-color: #c4c4c4;
-    color: #333333;
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 600;
-}
 
 
 /* ---------------MEDIA QUERY---------------------*/
@@ -256,220 +104,58 @@ nav ul li a:hover {
 /* MEDIA QUERY - TABLETS (768 x 1024)*/
 /* ---------------------------------------------- */
  @media screen and (min-width: 768px) {
+ 
 
-    .container {
-        padding-right: 10px;
-    }
 
-    
+/* GERAL ------------------------------------*/
+
 /* HEADER -----------------------------------*/
 
-    .cabecalho {
-        width: 768px;
-    }
+/* MENU -------------------------------------*/
 
-    .cabecalho .cabecalho-item-02 {
-        margin-left: 250px;
-    }
-
-    .cabecalho .cabecalho-item-03 img{
-        margin-left: 170px;   
-    }
-
-
-/* ENTRADAS -----------------------------------*/
-
-    .container .entrada {
-        width: 728px;
-        height: 189px;
-        border: 1px solid;
-        border-radius: 4px;
-        padding: 20px;
-        color: #979797;
-    }
-
-    .container .nova-transacao {
-        display: block;
-        text-align: center;
-        color: #000000;
-        /* texto */
-        font-style: normal;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 22px; 
-    }
- 
-    .entrada .entrada-item {
-        box-sizing: border-box;
-        padding-top: 20px;
-    }
-
-    .entrada-item-01 {
-        display: inline-block;
-        width: 170px;
-        height: 32px;
-        border-radius: 4px;
-        padding-right: 20px;
-    }
-
-    .entrada-item-02 {
-        display: inline-block;
-        width: 336px;
-        height: 32px;
-        border-radius: 4px;
-        padding-right: 20px;
-    }
-
-    .entrada-item-03 {
-        display: inline-block;
-        width: 170px;
-        height: 32px;
-        border-radius: 4px;
-    }
-
-    .entrada-item-04 {
-        display: flex;
-        width: 230px;
-        height: 32px;
-        border-radius: 4px;
-        margin-left: auto;
-    }
-
-    .tiitle {
-        border: none;
-    }
-
+/* ENTRADAS ---------------------------------*/
 
 /* SAIDAS -----------------------------------*/
 
-    .saidas {
-        margin-top: -30px;
-        width: 725px;
-    }
-
-
-/* MENU -----------------------------------*/
-
-    nav {
-        width: 252px;
-        height: 1000px;
-    }
-
-    nav ul label {
-        display: block;
-        margin-left: -170px;
-        margin-top: -50px;
-    }
 }
+
+
 
 
 /* ---------------------------------------------- */
 /* MEDIA QUERY - DESKTOP ( 1500 x 1000 )*/
 /* ---------------------------------------------- */
 @media screen and (min-width: 1500px) {
-
-    .container {
-        display: flex;
-        position: absolute;
-        margin-left: 185px;
-        width: 1150px;
-    }
-
-
-/* HEADER -----------------------------------*/
-   
-    .container .entrada {
-        margin-top: 100px;
-    }
-
-    .cabecalho-item {
-        margin-left: 200px;
-    }
-
-    .cabecalho {
-        width: 1500px;
-        height: 80px;
-    }
-
-    .cabecalho-item-03 img  {
+ 
+    /* GERAL ------------------------------------*/
+    
+    /* HEADER -----------------------------------*/
+    
+    /* MENU -------------------------------------*/
+    .box-menu .menu-hamburguer {
         display: none;
     }
-
-    .cabecalho .menu-hamburguer {
-        width: 300px;
-        height: 40px;
+    .box-menu .menu-fechar {
+        display: none;
+    }
+    
+    .box-menu .menu {
         display: flex;
-        margin-left: 390px;
-        background: #FFF;
-        position: unset;
-        align-items: center;
-    }   
-
-    .menu-hamburguer ul {
-        display: flex;
-        position: unset;
-        margin: 0px;
-        padding: 0px;
+        position: inherit;
+        width: fit-content;
+        white-space: nowrap;
+        background: white;
+        color: black;
+        flex-direction: row;
     }
-
-    .menu-hamburguer a {
-        color: #333333;
-    }
-
-    .menu-hamburguer a:hover {
-        cursor: pointer;
-        background: none;
-    }
-
-    .menu_cadastro {
-        margin-left: 22px;
-        padding: 0px;
-    }
-
-    .menu_limpar {
-        margin: 0px;
-        padding: 0px;
-    }
-
-    .menu_cadastro::after {
-        content: "|";
-        margin: 0px 19px;
-    }
-
-    .cabecalho .cabecalho-item-02 {
-        margin-left: 20px;
-    }
-
-
-/* ENTRADA _______________________________________ */
-
-    .container .entrada {
-        width: 400px;
-        height: 344px;
-    }
-
-    .container .entrada .entrada-item {
-        width: 100%;
-    }
-
-    .container .entrada .entrada-item .item-01 {
-        width: 356px;
-    }
-
-    .container .entrada .entrada-item .item-02 {
-        width: 356px;
-    }
-
-
-/* SAÍDA _______________________________________ */
-
-    .container .saidas {
-        margin-top: 50px;
-        margin-left: 40px;
-        width: 100%;
-    }
+    
+    .menu .menu-separador {
+        display: block;
+        
 }
 
-
-
-
+    /* ENTRADAS ---------------------------------*/
+    
+    /* SAIDAS -----------------------------------*/
+    
+    }
