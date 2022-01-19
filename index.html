@@ -17,38 +17,40 @@
 <body>
 
     <header>
+        <div class="header-wrapper">
 
-        <div class="cabecalho">
 
-            <div class="wrapper-entrada">
+            <div class="cabecalho">
 
-                <div class="cabecalho-item logo">
-                    <img src="./assets/img/logo.png" alt="">
-                </div>
+                <div class="wrapper-entrada">
 
-                <div class="cabecalho-item texto-logo">
-                    <h2> Controle Financeiro</h2>
-                </div>
+                    <div class="cabecalho-item logo">
+                        <img src="./assets/img/logo.png" alt="">
+                    </div>
 
-                <div class="cabecalho-item box-menu">
-                    <div>
-                        <div class="menu-hamburguer">
-                            <img src="./assets/img/menu.svg" alt="">
+                    <div class="cabecalho-item texto-logo">
+                        <h2> Controle Financeiro</h2>
+                    </div>
+
+                    <div class="cabecalho-item box-menu">
+                        <div>
+                            <div class="menu-hamburguer">
+                                <img src="./assets/img/menu.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="menu">
+                            <div class="lista-menu menu-fechar">
+                                <img class="teste" src="./assets/img/menu-fechar.svg" alt="">
+                            </div>
+                            <div class="lista-menu menu-cadastro">Cadastro de Transações</div>
+                            <div class="lista-menu menu-separador"> | </div>
+                            <div class="lista-menu menu-limpar">Limpar Dados</div>
                         </div>
                     </div>
-                    <div class="menu">
-                        <div class="lista-menu menu-fechar">
-                            <img class="teste" src="./assets/img/menu-fechar.svg" alt="">
-                        </div>
-                        <div class="lista-menu menu-cadastro">Cadastro de Transações</div>
-                        <div class="lista-menu menu-separador"> | </div>
-                        <div class="lista-menu menu-limpar">Limpar Dados</div>
-                    </div>
-                </div>
 
+                </div>
             </div>
         </div>
-
     </header>
 
     <main class="container">
@@ -56,16 +58,18 @@
         <form class="entrada">
 
             <div class="nova-transacao">
-                <p>Nova Transação</p>
+                <h3>Nova Transação</h3>
             </div>
 
 
             <div class="entrada-item entrada-item-01">
                 <label for="transacao">Tipo de Transação</label>
-                <select class="item-01" name="transacao" id="transacao">
-                    <option> Compra </option>
-                    <option> Venda </option>
-                </select>
+                <div>
+                    <select class="item-01" name="transacao" id="transacao">
+                        <option> Compra </option>
+                        <option> Venda </option>
+                    </select>
+                </div>
             </div>
 
             <div class="entrada-item entrada-item-02">
@@ -87,15 +91,15 @@
         <section class="saidas">
 
             <div class="tiitle">
-                Extrato de Transações
+                <h3>Extrato de Transações </h3>
             </div>
 
             <table class="saida-item tabela-extrato">
 
                 <tr class="saida-item tabela-linha-01">
-                    <th></th>
-                    <th>Mercadoria</th>
-                    <th>Valor</th>
+                    <th class="tabela-sinais"></th>
+                    <th class="tabela-mercadoria">Mercadoria</th>
+                    <th class="tabela-valor">Valor</th>
                 </tr>
 
                 <tr class="saida-item tabela-linha-02">

@@ -3,11 +3,15 @@
     font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+
 }
 
 body {  
     border: 0;
-    box-sizing: border-box;
+        font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
 }
 
 
@@ -16,7 +20,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #c4c4c4;
+    background-color: #E0E0E0;
     }
 
  .wrapper-entrada {
@@ -35,7 +39,6 @@ body {
 
 
 /* MENU -------------------------------------*/
-
 .box-menu .menu {
     position: fixed;
     width: 85%;
@@ -49,7 +52,7 @@ body {
 }
 
 .box-menu .menu .lista-menu{
-    padding: 25px;
+    padding: 10px;
     text-align: right;
 }
 
@@ -66,7 +69,7 @@ body {
     color: black;
 }
 .box-menu .menu .menu-fechar:hover {
-background: #333333;
+    background: #333333;
 }
 
 .box-menu:hover .menu {
@@ -74,12 +77,104 @@ background: #333333;
 }
 
 
-
-
-
 /* ENTRADAS -----------------------------------*/
+.nova-transacao {
+    display: none;
+}
+
+.entrada {
+    padding: 20px;
+}
+
+.entrada-item {
+    margin-top: 15px;
+}
+
+.entrada-item select, .entrada-item input{
+    width: 100%;
+    border: 1px solid #979797;
+    border-radius: 4px;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+
+.entrada-item input[type="submit"] {
+    background: #333333;
+    color: #ffffff;
+}
+
+
+
 
 /*  SÁIDAS-----------------------------------*/
+
+.saidas {
+    padding: 20px;
+    margin-top: -15px;
+}
+
+.tiitle {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #333333;
+    padding: 20px; 
+}
+
+.saidas table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.saidas tr {
+    border-bottom: 1px solid #000;
+}
+
+.saidas td {
+padding: 7px;
+}
+
+table .saida-item .tabela-sinais {
+    width: 5%;
+}
+
+table .saida-item .tabela-mercadoria {
+    width: 65%;
+    text-align: left;
+}
+
+table .saida-item .tabela-valor {
+    width: 30%;
+    text-align: center;
+}
+
+table .extrato-btn {
+    text-align: center;
+}
+
+table .extrato-mercadoria {
+    text-align: left;
+}
+
+table .extrato-valor {
+    text-align: right;
+}
+
+
+table .duas-linhas {
+    padding: 1.5px;
+}
+
+table .tabela-linha-05 {
+border-bottom: none;
+font-weight: 700;
+}
+
+.status {
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
 
 
 
@@ -128,9 +223,11 @@ background: #333333;
 @media screen and (min-width: 1500px) {
  
     /* GERAL ------------------------------------*/
-    
+
     /* HEADER -----------------------------------*/
-    
+   header {
+   }
+
     /* MENU -------------------------------------*/
     .box-menu .menu-hamburguer {
         display: none;
@@ -147,6 +244,8 @@ background: #333333;
         background: white;
         color: black;
         flex-direction: row;
+        margin-right: 50px;
+
     }
     
     .menu .menu-separador {
@@ -155,7 +254,8 @@ background: #333333;
 }
 
     /* ENTRADAS ---------------------------------*/
-    
+  
+
     /* SAIDAS -----------------------------------*/
     
     }
