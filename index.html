@@ -61,30 +61,37 @@
                 <h3>Nova Transação</h3>
             </div>
 
+            <div class="campos-entrada">
 
-            <div class="entrada-item entrada-item-01">
-                <label for="transacao">Tipo de Transação</label>
-                <div>
-                    <select class="item-01" name="transacao" id="transacao">
-                        <option> Compra </option>
-                        <option> Venda </option>
-                    </select>
+                <div class="entrada-item entrada-item-01 curto">
+                    <label for="transacao">Tipo de Transação</label>
+                    <div class="item-01">
+                        <select name="transacao" id="transacao">
+                            <option> Compra </option>
+                            <option> Venda </option>
+                        </select>
+                    </div>
                 </div>
-            </div>
 
-            <div class="entrada-item entrada-item-02">
-                <label for="mercadoria">Nome da Mercadoria</label>
-                <input class="item-02" type="text" name="mercadoria" id="mercadoria" placeholder="Input" required>
-            </div>
+                <div class="entrada-item entrada-item-02 longo">
+                    <label for="mercadoria">Nome da Mercadoria</label>
+                    <div class="item-02">
+                        <input type="text" name="mercadoria" id="mercadoria" placeholder="Input" required>
+                    </div>
+                </div>
 
-            <div class="entrada-item entrada-item-03">
-                <label for="valor">Valor</label>
-                <input class="item-03" type="number" name="valor" id="valor" placeholder="R$ 0,00" required>
+                <div class="entrada-item entrada-item-03 curto">
+                    <label for="valor">Valor</label>
+                    <div class="item-03">
+                        <input type="number" name="valor" id="valor" placeholder="R$ 0,00" required>
+                    </div>
+                </div>
             </div>
 
             <div class="entrada-item entrada-item-04">
                 <input class="item-04" type="submit" value="Adicionar Transação">
             </div>
+
 
         </form>
 

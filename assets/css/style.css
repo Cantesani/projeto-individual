@@ -200,22 +200,51 @@ font-weight: 700;
 /* ---------------------------------------------- */
  @media screen and (min-width: 768px) {
  
-
-
 /* GERAL ------------------------------------*/
 
 /* HEADER -----------------------------------*/
 
 /* MENU -------------------------------------*/
 
+.box-menu .menu {
+width: 30%;
+}
+
 /* ENTRADAS ---------------------------------*/
 
-/* SAIDAS -----------------------------------*/
+
+.entrada {
+    margin: 20px;
+    border: 1px solid #979797;
+    border-radius: 5px;
+}
+
+.nova-transacao {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+} 
+
+.campos-entrada {
+    display: flex;
+    
+}
+
+.curto {
+width: 25%;
+margin: 10px
 
 }
 
+.longo {
+    width: 50%;
+}
 
-
+/* SAIDAS -----------------------------------*/
+.tiitle {
+    border-top: none;
+}
+}
 
 /* ---------------------------------------------- */
 /* MEDIA QUERY - DESKTOP ( 1500 x 1000 )*/
