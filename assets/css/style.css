@@ -4,12 +4,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 body {  
     border: 0;
-        font-weight: 400;
+    font-weight: 400;
     font-style: normal;
     font-size: 14px;
 }
@@ -68,6 +67,7 @@ body {
     background: white;
     color: black;
 }
+
 .box-menu .menu .menu-fechar:hover {
     background: #333333;
 }
@@ -98,17 +98,13 @@ body {
     margin-top: 5px;
 }
 
-
 .entrada-item input[type="submit"] {
     background: #333333;
     color: #ffffff;
 }
 
 
-
-
 /*  SÁIDAS-----------------------------------*/
-
 .saidas {
     padding: 20px;
     margin-top: -15px;
@@ -125,12 +121,13 @@ body {
     width: 100%;
     border-collapse: collapse;
 }
+
 .saidas tr {
     border-bottom: 1px solid #000;
 }
 
 .saidas td {
-padding: 7px;
+    padding: 7px;
 }
 
 table .saida-item .tabela-sinais {
@@ -159,14 +156,13 @@ table .extrato-valor {
     text-align: right;
 }
 
-
 table .duas-linhas {
     padding: 1.5px;
 }
 
 table .tabela-linha-05 {
-border-bottom: none;
-font-weight: 700;
+    border-bottom: none;
+    font-weight: 700;
 }
 
 .status {
@@ -178,8 +174,6 @@ font-weight: 700;
 
 
 
-
-
 /* ---------------MEDIA QUERY---------------------*/
  /* SMARTPHONE    - 411 x 731 */
  /* TABLETS       - 768 x 1024*/
@@ -187,17 +181,20 @@ font-weight: 700;
 /* ---------------------------------------------- */
 
 
+
+
 /* ---------------------------------------------- */
 /* MEDIA QUERY - SMARTPHONE (411 x 731) */  
 /* ---------------------------------------------- */
- @media screen and (min-width: 411px) {
 
+ @media screen and (min-width: 411px) {
 }
 
 
 /* ---------------------------------------------- */
 /* MEDIA QUERY - TABLETS (768 x 1024)*/
 /* ---------------------------------------------- */
+
  @media screen and (min-width: 768px) {
  
 /* GERAL ------------------------------------*/
@@ -207,7 +204,7 @@ font-weight: 700;
 /* MENU -------------------------------------*/
 
 .box-menu .menu {
-width: 30%;
+    width: 30%;
 }
 
 /* ENTRADAS ---------------------------------*/
@@ -227,24 +224,32 @@ width: 30%;
 
 .campos-entrada {
     display: flex;
-    
 }
 
 .curto {
-width: 25%;
-margin: 10px
-
+    width: 25%;
+    margin: 10px
 }
 
 .longo {
     width: 50%;
 }
 
+.entrada-item .item-04 {
+    width: 30%;
+}
+
+.entrada-item-04 {
+    text-align: right;
+}
+
+
 /* SAIDAS -----------------------------------*/
 .tiitle {
     border-top: none;
 }
 }
+
 
 /* ---------------------------------------------- */
 /* MEDIA QUERY - DESKTOP ( 1500 x 1000 )*/
@@ -254,8 +259,7 @@ margin: 10px
     /* GERAL ------------------------------------*/
 
     /* HEADER -----------------------------------*/
-   header {
-   }
+  
 
     /* MENU -------------------------------------*/
     .box-menu .menu-hamburguer {
@@ -274,17 +278,12 @@ margin: 10px
         color: black;
         flex-direction: row;
         margin-right: 50px;
-
     }
     
     .menu .menu-separador {
         display: block;
-        
-}
+    }
 
     /* ENTRADAS ---------------------------------*/
-  
-
     /* SAIDAS -----------------------------------*/
-    
-    }
+}
