@@ -1,3 +1,4 @@
+
 /*  GERAL  -----------------------------------*/
 * {
     font-family: 'Lato', sans-serif;
@@ -13,20 +14,19 @@ body {
     font-size: 14px;
 }
 
-
 /* HEADER -----------------------------------*/
  .cabecalho {
     width: 100%;
     display: flex;
     justify-content: center;
     background-color: #E0E0E0;
-    }
+}
 
  .wrapper-entrada {
     width: 100%;
     display: flex;
     text-align: center;
- }
+}
 
  .texto-logo {
     width: 100%;
@@ -35,7 +35,6 @@ body {
 .cabecalho-item {
     padding: 15px;
 }
-
 
 /* MENU -------------------------------------*/
 .box-menu .menu {
@@ -76,7 +75,6 @@ body {
     display: flex;
 }
 
-
 /* ENTRADAS -----------------------------------*/
 .nova-transacao {
     display: none;
@@ -102,7 +100,6 @@ body {
     background: #333333;
     color: #ffffff;
 }
-
 
 /*  SÁIDAS-----------------------------------*/
 .saidas {
@@ -172,15 +169,11 @@ table .tabela-linha-05 {
 }
 
 
-
-
 /* ---------------MEDIA QUERY---------------------*/
  /* SMARTPHONE    - 411 x 731 */
  /* TABLETS       - 768 x 1024*/
  /* DESKTOP       - 1500 x 1000*/
 /* ---------------------------------------------- */
-
-
 
 
 /* ---------------------------------------------- */
@@ -198,18 +191,14 @@ table .tabela-linha-05 {
  @media screen and (min-width: 768px) {
  
 /* GERAL ------------------------------------*/
-
 /* HEADER -----------------------------------*/
 
 /* MENU -------------------------------------*/
-
 .box-menu .menu {
     width: 30%;
 }
 
 /* ENTRADAS ---------------------------------*/
-
-
 .entrada {
     margin: 20px;
     border: 1px solid #979797;
@@ -228,7 +217,7 @@ table .tabela-linha-05 {
 
 .curto {
     width: 25%;
-    margin: 10px
+    margin: 10px;
 }
 
 .longo {
@@ -243,7 +232,6 @@ table .tabela-linha-05 {
     text-align: right;
 }
 
-
 /* SAIDAS -----------------------------------*/
 .tiitle {
     border-top: none;
@@ -257,14 +245,31 @@ table .tabela-linha-05 {
 @media screen and (min-width: 1500px) {
  
     /* GERAL ------------------------------------*/
+    .container {
+        display: flex;
+        max-width: 1500px;
+        margin: auto;
+    }
+
+    .header-wrapper {
+        max-width: 1500px;
+        margin: auto;
+    }
 
     /* HEADER -----------------------------------*/
-  
+    .cabecalho .texto-logo {
+        text-align: left;
+    }
+   
+    header {
+        background: #E0E0E0;
+    }
 
     /* MENU -------------------------------------*/
     .box-menu .menu-hamburguer {
         display: none;
     }
+
     .box-menu .menu-fechar {
         display: none;
     }
@@ -283,7 +288,34 @@ table .tabela-linha-05 {
     .menu .menu-separador {
         display: block;
     }
-
+    
     /* ENTRADAS ---------------------------------*/
+    .entrada {
+        width: 40%;
+    }
+
+    .campos-entrada {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .curto, .longo {
+        width: 100%;
+        margin-left: 0;
+    }
+
+   .entrada-item-04 {
+        text-align: center;
+        width: 100%;
+    }
+
+    .entrada-item-04 .item-04 {
+        width: 100%; 
+    }
+
     /* SAIDAS -----------------------------------*/
+    .saidas {
+        width: 100%;
+        margin-top: 15px;
+}
 }
