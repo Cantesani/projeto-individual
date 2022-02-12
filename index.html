@@ -55,7 +55,7 @@
 
     <main class="container">
 
-        <form class="entrada">
+        <form class="entrada" onsubmit="testaFormulario(event)">
 
             <div class="nova-transacao">
                 <h3>Nova Transação</h3>
@@ -83,7 +83,8 @@
                 <div class="entrada-item entrada-item-03 curto">
                     <label for="valor">Valor</label>
                     <div class="item-03">
-                        <input type="number" name="valor" id="valor" placeholder="R$ 0,00" required>
+                        <input type="text" name="valor" id="valor" onkeypress="testaCampoValor(event)"
+                            onfocus="this.value = ''" placeholder="R$ 0,00" required>
                     </div>
                 </div>
             </div>
@@ -151,6 +152,8 @@
         <div class="rodape"></div>
     </footer>
 
+
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
