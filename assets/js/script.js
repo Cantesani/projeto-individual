@@ -28,7 +28,30 @@ for (item in loja) {
 function testaFormulario(e) {
     e.preventDefault();
 
+    var numeroPattern = /[^0-9R$,. ]+/g
+
+    if (numeroPattern.test(e.target.elements['valor'].value)) {
+        alert('Apenas números são permitidos no campo VALOR')
+        return false
+    }
+
+    if (e.target.elements['valor'].value.replace(/[R$,. ]/g, '').length < 4) {
+        alert('O campo VALOR precisa ser preenchido CORRETAMENTE! \n Exemplo: 10,90')
+        return false;
+    }
+
+    if (e.target.elements['mercadoria'].value == '') {
+        alert('O campo MERCADORIA precisa ser preenchido!')
+        return false
+    }
+
+    if (e.target.elements['valor'].value == '') {
+        alert('O campo VALOR precisa ser preenchido!')
+        return false
+    }
+
     var lojaCru = localStorage.getItem('loja')
+
     if (lojaCru != null) {
         var loja = JSON.parse(lojaCru)
     } else {
@@ -57,30 +80,7 @@ function testaFormulario(e) {
 
 
 
-    var numeroPattern = /[^0-9R$,. ]+/g
-    if (numeroPattern.test(e.target.elements['valor'].value)) {
 
-        alert('Apenas números são permitidos no campo VALOR')
-        return false
-    }
-
-    if (e.target.elements['valor'].value.replace(/[R$,. ]/g, '').length < 4) {
-        alert('O campo VALOR precisa ser preenchido CORRETAMENTE! \n Exemplo: 10,90')
-        return false;
-
-    }
-
-    if (e.target.elements['mercadoria'].value == '') {
-
-        alert('O campo MERCADORIA precisa ser preenchido!')
-        return false
-    }
-
-    if (e.target.elements['valor'].value == '') {
-
-        alert('O campo VALOR precisa ser preenchido!')
-        return false
-    }
 }
 
 function testaCampoValor(e) {
