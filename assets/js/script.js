@@ -1,27 +1,16 @@
-var loja = [
-    {
-        tipoTransacao: true, //venda
-        mercadoria: 'Arroz',
-        valor: 'R$ 3,90',
-    },
-    {
-        tipoTransacao: true, //venda
-        mercadoria: 'Feijão',
-        valor: 'R$ 5,90',
-    },
-    {
-        tipoTransacao: false, //compra
-        mercadoria: 'Cerveja',
-        valor: 'R$ 2,49',
-    },
-]
+var lojaCru = localStorage.getItem('loja')
+if (lojaCru != null) {
+    var loja = JSON.parse(lojaCru)
+} else {
+    var loja = [];
+}
 
 for (item in loja) {
     document.querySelector('table.tabela-extrato tbody').innerHTML +=
         `<tr>
 
             <td class="extrato-btn"> 
-                ${loja[item].tipoTransacao ? '+' : '-'}
+                ${loja[item].tipoTransacao}
             </td>
 
             <td class="extrato-mercadoria">
@@ -38,6 +27,35 @@ for (item in loja) {
 
 function testaFormulario(e) {
     e.preventDefault();
+
+    var lojaCru = localStorage.getItem('loja')
+    if (lojaCru != null) {
+        var loja = JSON.parse(lojaCru)
+    } else {
+        var loja = [];
+    }
+
+
+    var alteraTransacao = e.target.elements['transacao'].value
+    if (alteraTransacao == 'Compra') {
+        var alteraTransacao = '+';
+    } else {
+        var alteraTransacao = '-'
+
+    }
+
+    loja.push({
+        tipoTransacao: alteraTransacao,
+        mercadoria: e.target.elements['mercadoria'].value,
+        valor: e.target.elements['valor'].value,
+    })
+
+
+    localStorage.setItem('loja', JSON.stringify(loja))
+
+    window.location.href = "./index.html"
+
+
 
     var numeroPattern = /[^0-9R$,. ]+/g
     if (numeroPattern.test(e.target.elements['valor'].value)) {
@@ -81,3 +99,8 @@ function testaCampoValor(e) {
         e.target.value += e.key;
     }
 }
+
+
+
+// JS DO FORMULÁRIO
+
