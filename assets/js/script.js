@@ -5,6 +5,21 @@ if (lojaCru != null) {
     var loja = [];
 }
 
+function limpaDados() {
+    var loja = 0;
+    var usuarioConfirma = confirm('Tem certeza que deseja apagar os dados?')
+    if (usuarioConfirma) {
+        localStorage.clear()
+        window.location.href = "./index.html"
+    }
+}
+
+if (loja.length === 0) {
+    document.getElementById("status").style.display = "none";
+} else {
+    document.getElementById("nenhuma-transacao").style.display = "none";
+}
+
 for (item in loja) {
     document.querySelector('table.tabela-extrato tbody').innerHTML +=
         `<tr>
@@ -58,13 +73,18 @@ function testaFormulario(e) {
         var loja = [];
     }
 
+    if (lojaCru == []) {
+        console.log('vazio')
+    }
+
+
 
     var alteraTransacao = e.target.elements['transacao'].value
+
     if (alteraTransacao == 'Compra') {
         var alteraTransacao = '+';
     } else {
         var alteraTransacao = '-'
-
     }
 
     loja.push({
@@ -73,14 +93,8 @@ function testaFormulario(e) {
         valor: e.target.elements['valor'].value,
     })
 
-
     localStorage.setItem('loja', JSON.stringify(loja))
-
     window.location.href = "./index.html"
-
-
-
-
 }
 
 function testaCampoValor(e) {
@@ -94,12 +108,10 @@ function testaCampoValor(e) {
         e.target.value += ','
     }
 
-
     if ((/[0-9]+/g).test(e.key) && e.target.value.length < 8) {
         e.target.value += e.key;
     }
 }
-
 
 
 // JS DO FORMULÁRIO

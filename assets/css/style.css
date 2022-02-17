@@ -114,6 +114,13 @@ body {
     padding: 20px; 
 }
 
+#nenhuma-transacao {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.5rem;
+}
+
 .saidas table {
     width: 100%;
     border-collapse: collapse;
@@ -162,10 +169,20 @@ table .tabela-linha-05 {
     font-weight: 700;
 }
 
-.status {
+table span {
     text-align: right;
     text-transform: uppercase;
     font-size: 11px;
+    font-weight: 400;
+}
+
+#status {
+    text-align: right;
+    margin-top: -.5rem;
+    margin-right: 0.4rem;
+    /* texto */
+    font-size: 14px;
+    line-height: 22px;
 }
 
 
@@ -231,6 +248,7 @@ table .tabela-linha-05 {
 .entrada-item-04 {
     text-align: right;
 }
+
 
 /* SAIDAS -----------------------------------*/
 .tiitle {

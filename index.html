@@ -44,7 +44,7 @@
                             </div>
                             <div class="lista-menu menu-cadastro">Cadastro de Transações</div>
                             <div class="lista-menu menu-separador"> | </div>
-                            <div class="lista-menu menu-limpar">Limpar Dados</div>
+                            <div class="lista-menu menu-limpar" onclick="limpaDados()">Limpar Dados</div>
                         </div>
                     </div>
 
@@ -93,7 +93,6 @@
                 <input class="item-04" type="submit" value="Adicionar Transação">
             </div>
 
-
         </form>
 
         <section class="saidas">
@@ -104,18 +103,37 @@
 
             <table class="saida-item tabela-extrato">
 
-                <tr class="saida-item tabela-linha-01">
+                <tr class="saida-item tabela-linha-01" id="teste123">
                     <th class="tabela-sinais"></th>
                     <th class="tabela-mercadoria">Mercadoria</th>
                     <th class="tabela-valor">Valor</th>
+
                 </tr>
+
+
 
             </table>
 
-            <div class="status">
+            <table class="valor-total">
+
+                <tr>
+                    <td class="duas-linhas"></td>
+                </tr>
+
+                <tr class="saida-item tabela-linha-05">
+                    <td></td>
+                    <td> Total</td>
+                    <td class="extrato-valor"> R$ 0,00 </td>
+                </tr>
+
+            </table>
+            <div id="status">
                 <p>[lucro]</p>
             </div>
 
+            <div id="nenhuma-transacao">
+                Nenhuma Transação Encontrada
+            </div>
         </section>
 
     </main>
