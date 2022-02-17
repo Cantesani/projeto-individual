@@ -5,12 +5,9 @@ if (lojaCru != null) {
     var loja = [];
 }
 
-function fecharMenu() {
+function cadastroTransacoes() {
     window.location.href = "./index.html"
 }
-
-
-
 
 function limpaDados() {
     var usuarioConfirmaLimpar = confirm('Tem certeza que deseja apagar os dados?')
