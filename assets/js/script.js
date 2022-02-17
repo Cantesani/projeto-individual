@@ -5,6 +5,10 @@ if (lojaCru != null) {
     var loja = [];
 }
 
+function cadastroTransacoes() {
+    window.location.href = "./index.html"
+}
+
 function limpaDados() {
     var loja = 0;
     var usuarioConfirma = confirm('Tem certeza que deseja apagar os dados?')
