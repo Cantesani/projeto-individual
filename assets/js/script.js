@@ -6,12 +6,13 @@ if (lojaCru != null) {
 }
 
 function cadastroTransacoes() {
-    var usuarioConfirmaLimpar = confirm('Tem certeza que deseja apagar os dados?')
+    var usuarioConfirmaLimpar = confirm('Tem certeza que deseja ir para o Cadastro de Transações?')
     if (usuarioConfirmaLimpar) {
-        localStorage.clear()
         window.location.href = "./index.html"
     }
+
 }
+
 
 
 function limpaDados() {

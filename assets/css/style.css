@@ -54,6 +54,15 @@ body {
     text-align: right;
 }
 
+.menu .menu-cadastro {
+    cursor: pointer;
+}
+
+.menu .menu-cadastro, .menu .menu-limpar {
+    cursor: pointer;
+}
+
+
 .menu .menu-separador {
     display: none;
 }
