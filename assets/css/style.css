@@ -58,10 +58,9 @@ body {
     cursor: pointer;
 }
 
-.menu .menu-cadastro, .menu .menu-limpar {
+.menu .menu-cadastro, .menu-limpar, .img-fechar {
     cursor: pointer;
 }
-
 
 .menu .menu-separador {
     display: none;
@@ -71,7 +70,7 @@ body {
     display: flex;
 }
 
-.box-menu .menu .lista-menu:hover{
+.box-menu .menu .lista-menu .img-fechar:hover{
     background: white;
     color: black;
 }

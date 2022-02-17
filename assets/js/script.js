@@ -5,12 +5,8 @@ if (lojaCru != null) {
     var loja = [];
 }
 
-function cadastroTransacoes() {
-    var usuarioConfirmaLimpar = confirm('Tem certeza que deseja ir para o Cadastro de Transações?')
-    if (usuarioConfirmaLimpar) {
-        window.location.href = "./index.html"
-    }
-
+function fecharMenu() {
+    window.location.href = "./index.html"
 }
 
 
