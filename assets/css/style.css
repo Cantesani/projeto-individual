@@ -70,7 +70,7 @@ body {
     display: flex;
 }
 
-.box-menu .menu .lista-menu .img-fechar:hover{
+.box-menu .lista-menu:hover{
     background: white;
     color: black;
 }

@@ -11,6 +11,7 @@ function fecharMenu() {
 
 
 
+
 function limpaDados() {
     var usuarioConfirmaLimpar = confirm('Tem certeza que deseja apagar os dados?')
     if (usuarioConfirmaLimpar) {
