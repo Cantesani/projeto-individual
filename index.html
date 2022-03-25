@@ -83,9 +83,10 @@
 
                 <div class="entrada-item entrada-item-03 curto">
                     <label for="valor">Valor</label>
-                    <div class="item-03">
-                        <input type="text" name="valor" id="valor" onkeypress="testaCampoValor(event)"
-                            onfocus="this.value = ''" placeholder="R$ 0,00" required>
+                    <div class="item-03" id="valor">
+                        <input type="text" oncopy="return false" oncut="return false" onpaste="return false"
+                            name="valor" id="valor" onkeypress="testaCampoValor(event)" onfocus="this.value=''"
+                            placeholder="R$ 0,00" required>
                     </div>
                 </div>
             </div>
@@ -117,20 +118,8 @@
 
             <table class="valor-total">
 
-                <tr>
-                    <td class="duas-linhas"></td>
-                </tr>
-
-                <tr class="saida-item tabela-linha-05">
-                    <td></td>
-                    <td> Total</td>
-                    <td class="extrato-valor"> R$ 0,00 </td>
-                </tr>
-
             </table>
-            <div id="status">
-                <p>[lucro]</p>
-            </div>
+
 
             <div id="nenhuma-transacao">
                 Nenhuma Transação Encontrada

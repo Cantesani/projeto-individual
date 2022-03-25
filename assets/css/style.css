@@ -172,9 +172,15 @@ table .duas-linhas {
     padding: 1.5px;
 }
 
-table .tabela-linha-05 {
+table .tabela-linha-05  {
     border-bottom: none;
     font-weight: 700;
+    font-size:large
+}
+
+table .tabela-linha-06  {
+    border-bottom: none;
+    
 }
 
 table span {
@@ -184,7 +190,8 @@ table span {
     font-weight: 400;
 }
 
-#status {
+p {
+    width: 100%;
     text-align: right;
     margin-top: -.5rem;
     margin-right: 0.4rem;

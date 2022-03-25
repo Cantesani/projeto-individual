@@ -18,22 +18,17 @@ function limpaDados() {
 }
 
 if (loja.length === 0) {
-    document.getElementById("status").style.display = "none";
 } else {
     document.getElementById("nenhuma-transacao").style.display = "none";
 }
 
-var numeroPadrao = /[^0-9.,]/
 
+
+// garante que o campo VALOR seja preenchido com caracteres diferente de NÚMEROS.
+var numeroPadrao = /[^0-9.,]/
 
 function testaCampoValor(e) {
     e.preventDefault();
-
-    if (numeroPadrao.test(e.key)) {
-        console.log(e.key);
-        e.preventDefault();
-        return;
-    }
 
     valor = e.target.value.toString();
     valor = valor.replace(/[\D]+/g, "");
@@ -45,30 +40,26 @@ function testaCampoValor(e) {
             valor = valor.replace(/([0-9]{3})[,|\.]/g, ".$1");
         }
     }
+
     e.target.value = valor;
 
     if ((/[0-9,.]+/g).test(e.key)) {
         e.target.value += e.key;
     }
+
+    document.getElementById('valor').onpaste = function (e) {
+        return false;
+    }
+
 }
 
+// garante que nenhum campo seja preenchido de forma errada ou não seja preencido!
 function testaFormulario(e) {
     e.preventDefault();
 
     if (numeroPadrao.test(e.target.elements['valor'].value)) {
         alert('Apenas números são permitidos no campo VALOR')
         return false
-    }
-
-    // if ((/[0-9,.]+/g).test(e.key)) {
-    //     e.target.value += e.key;
-    // }
-
-    // -------------------------------------
-    // PAREI AQUI
-    // ------------------------------------
-    if (e.target.elements['valor'].value.replace(/[,.]+/g, "")) {
-        console.log('oi')
     }
 
     if (e.target.elements['mercadoria'].value == '') {
@@ -89,36 +80,30 @@ function testaFormulario(e) {
         var loja = [];
     }
 
-
     var alteraTransacao = e.target.elements['transacao'].value
 
     if (alteraTransacao == 'Compra') {
-        var alteraTransacao = '+';
+        var alteraTransacao = '-';
     } else {
-        var alteraTransacao = '-'
+        var alteraTransacao = '+'
     }
-
-    var valorCRU = e.target.elements['valor'].value
-    var valorBRL = (new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valorCRU));
-
-    // console.log(valorCRU)
-    // console.log(valorBRL)
-    // e.preventDefault()
 
     loja.push({
         tipoTransacao: alteraTransacao,
         mercadoria: e.target.elements['mercadoria'].value,
-        valor: valorBRL
-        // .replaceAll(".", "")
-        // .replaceAll(",", "."),
+        valor: e.target.elements['valor'].value,
     })
+
 
     localStorage.setItem('loja', JSON.stringify(loja))
     window.location.href = "./index.html"
 }
 
+
+//retornar tabela preenchida
 for (item in loja) {
     document.querySelector('table.tabela-extrato tbody').innerHTML +=
+
         `<tr>
 
             <td class="extrato-btn"> 
@@ -136,4 +121,58 @@ for (item in loja) {
         </tr>
         `
 }
+
+
+// faz somatória dos extratos
+let valorTotal = 0;
+
+for (let i of loja) {
+
+    valorLimpo = parseFloat(i.valor.replaceAll('.', '').replace(',', '.'));
+
+    if (i.tipoTransacao == '-') {
+        valorTotal -= valorLimpo
+    }
+    else {
+        valorTotal += valorLimpo
+    }
+}
+
+
+// converte valor final em moeda PT-BR REAL
+valorTotalConvertido = valorTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+
+// retornar como LUCRO ou PREJUIZO
+if (valorTotal >= 0) {
+    statusFinanceiro = 'Lucro';
+} else {
+    statusFinanceiro = 'Prejuizo';
+
+}
+
+
+//retorna resultados para os EXTRATO
+for (item in loja) {
+    document.querySelector('table.valor-total').innerHTML =
+
+        `<tr>
+        <tr class="saida-item tabela-linha-05">
+            <td></td>
+            <td> Total</td>
+            <td class="extrato-valor" id="status"> ${(valorTotalConvertido)} </td>
+        </tr>
+        
+        <tr class="tabela-linha-06">
+            <td> </td>
+            <td> </td>
+            <td> <p id"statusFinanceiro">[${statusFinanceiro}] </p> </td>
+        </tr>
+    </tr>
+    </tr>
+    `
+}
+
+
+
 
