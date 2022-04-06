@@ -1,28 +1,115 @@
-var lojaCru = localStorage.getItem('loja')
-if (lojaCru != null) {
-    var loja = JSON.parse(lojaCru)
-} else {
-    var loja = [];
-}
+//Desenha toda a tabela conforme usuário preenche os inputs.
+function desenhaTabela() {
 
-function cadastroTransacoes() {
-    window.location.href = "./index.html"
-}
+    var lojaCru = localStorage.getItem('loja')
 
-function limpaDados() {
-    var usuarioConfirmaLimpar = confirm('Tem certeza que deseja apagar os dados?')
-    if (usuarioConfirmaLimpar) {
-        localStorage.clear()
-        window.location.href = "./index.html"
+    if (lojaCru != null) {
+        var loja = JSON.parse(lojaCru)
+    } else {
+        var loja = [];
+    }
+
+    //remover e adicionar cada item da tabela
+    conteudoTabela = [...document.querySelectorAll('table.tabela-extrato tbody .conteudo-dinamico')]
+    conteudoTabela.forEach((element) => {
+        element.remove()
+    });
+
+    //retornar tabela preenchida
+    for (item in loja) {
+
+        document.querySelector('table.tabela-extrato tbody').innerHTML +=
+
+            `<tr class="conteudo-dinamico">
+
+            <td class="extrato-btn"> 
+                ${loja[item].tipoTransacao}
+            </td>
+
+            <td class="extrato-mercadoria">
+                ${loja[item].mercadoria}
+
+            </td>
+
+            <td class="extrato-valor"> 
+                ${loja[item].valor}
+            </td>
+        </tr>
+        `
+    }
+
+    // faz somatória dos extratos
+    let valorTotal = 0;
+
+    for (let i of loja) {
+
+        valorLimpo = parseFloat(i.valor.replaceAll('.', '').replace(',', '.'));
+
+        if (i.tipoTransacao == '-') {
+            valorTotal -= valorLimpo
+        }
+        else {
+            valorTotal += valorLimpo
+        }
+    }
+
+    // converte valor final em moeda PT-BR REAL
+    valorTotalConvertido = valorTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+    // retornar como LUCRO ou PREJUIZO
+    if (valorTotal >= 0) {
+        statusFinanceiro = 'Lucro'
+    } else {
+        statusFinanceiro = 'Prejuizo'
+    }
+
+    //se tabela for vazia, mostrar NENHUMA TRANSAÇÃO, caso contrario mostrar a TABELA.
+    if (loja.length === 0) {
+        document.getElementById("valor-total").style.display = "none"
+        document.getElementById("nenhuma-transacao").style.display = "block"
+    } else {
+        document.getElementById("valor-total").style.display = "revert"
+        document.getElementById("nenhuma-transacao").style.display = "none"
+    }
+
+    //retorna resultados para os EXTRATO
+    for (item in loja) {
+
+        document.querySelector('table.valor-total').innerHTML =
+
+            `<tr class="conteudo-dinamico">
+                <tr class="saida-item tabela-linha-05">
+                    <td></td>
+                    <td> Total</td>
+                    <td class="extrato-valor" id="status"> ${(valorTotalConvertido)} </td>
+                </tr>
+            
+                <tr class="tabela-linha-06" >
+                    <td> </td>
+                    <td> </td>
+                    <td> <p id"statusFinanceiro">[${statusFinanceiro}] </p> </td>
+                </tr>
+            </tr>`
     }
 }
 
-if (loja.length === 0) {
-} else {
-    document.getElementById("nenhuma-transacao").style.display = "none";
+//retorna para a pagina de transações.
+function cadastroTransacoes() {
+
+    desenhaTabela()
 }
 
+//Limpa toda a tabela, retorna em branco.
+function limpaDados() {
 
+    var usuarioConfirmaLimpar = confirm('Tem certeza que deseja apagar os dados?')
+
+    if (usuarioConfirmaLimpar) {
+        localStorage.clear()
+    }
+
+    desenhaTabela()
+}
 
 // garante que o campo VALOR seja preenchido com caracteres diferente de NÚMEROS.
 var numeroPadrao = /[^0-9.,]/
@@ -94,84 +181,11 @@ function testaFormulario(e) {
         valor: e.target.elements['valor'].value,
     })
 
-
     localStorage.setItem('loja', JSON.stringify(loja))
-    window.location.href = "./index.html"
+    desenhaTabela()
 }
 
-
-//retornar tabela preenchida
-for (item in loja) {
-    document.querySelector('table.tabela-extrato tbody').innerHTML +=
-
-        `<tr>
-
-            <td class="extrato-btn"> 
-                ${loja[item].tipoTransacao}
-            </td>
-
-            <td class="extrato-mercadoria">
-                ${loja[item].mercadoria}
-
-            </td>
-
-            <td class="extrato-valor"> 
-                ${loja[item].valor}
-            </td>
-        </tr>
-        `
-}
-
-
-// faz somatória dos extratos
-let valorTotal = 0;
-
-for (let i of loja) {
-
-    valorLimpo = parseFloat(i.valor.replaceAll('.', '').replace(',', '.'));
-
-    if (i.tipoTransacao == '-') {
-        valorTotal -= valorLimpo
-    }
-    else {
-        valorTotal += valorLimpo
-    }
-}
-
-
-// converte valor final em moeda PT-BR REAL
-valorTotalConvertido = valorTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-
-
-// retornar como LUCRO ou PREJUIZO
-if (valorTotal >= 0) {
-    statusFinanceiro = 'Lucro';
-} else {
-    statusFinanceiro = 'Prejuizo';
-
-}
-
-
-//retorna resultados para os EXTRATO
-for (item in loja) {
-    document.querySelector('table.valor-total').innerHTML =
-
-        `<tr>
-        <tr class="saida-item tabela-linha-05">
-            <td></td>
-            <td> Total</td>
-            <td class="extrato-valor" id="status"> ${(valorTotalConvertido)} </td>
-        </tr>
-        
-        <tr class="tabela-linha-06">
-            <td> </td>
-            <td> </td>
-            <td> <p id"statusFinanceiro">[${statusFinanceiro}] </p> </td>
-        </tr>
-    </tr>
-    </tr>
-    `
-}
+desenhaTabela()
 
 
 
